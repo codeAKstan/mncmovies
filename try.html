@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Auto-Slider with Captions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            text-align: center;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .slide .caption {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .slide .caption h2 {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        .slide .caption p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .control {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+
+        .control:focus {
+            outline: none;
+        }
+
+        @media (min-width: 768px) {
+            .slide {
+                flex: 0 0 33.333%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-container">
+        <div class="slider-track">
+            <div class="slide">
+                <img src="assets/img/film1.jpeg?text=1" alt="1">
+                <div class="caption">
+                    <h2>Squid Game Season 2 Review</h2>
+                    <p>December 31, 2024</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/img/film2.jpeg?text=2" alt="2">
+                <div class="caption">
+                    <h2>Breaking Bad: The Reunion</h2>
+                    <p>January 1, 2025</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/img/film1.jpeg?text=3" alt="3">
+                <div class="caption">
+                    <h2>Stranger Things: The Final Chapter</h2>
+                    <p>February 14, 2025</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/img/film2.jpeg?text=3" alt="3">
+                <div class="caption">
+                    <h2>Stranger Things: The Final Chapter</h2>
+                    <p>February 14, 2025</p>
+                </div>
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <div class="controls">
+            <button class="control prev">❮</button>
+            <button class="control next">❯</button>
+        </div>
+    </div>
+
+    <script>
+        const track = document.querySelector('.slider-track');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        const slideCount = slides.length;
+
+        let currentIndex = 0;
+        let slideInterval;
+
+        function updateSlider() {
+            const slideWidth = slides[0].offsetWidth;
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        function showNextSlide() {
+            if (currentIndex < slideCount - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Loop to the beginning
+            }
+            updateSlider();
+        }
+
+        function showPrevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = slideCount - 1; // Loop to the end
+            }
+            updateSlider();
+        }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(showNextSlide, 5000); // Auto-slide every 5 seconds
+        }
+
+        function stopAutoSlide() {
+            clearInterval(slideInterval);
+        }
+
+        nextButton.addEventListener('click', () => {
+            showNextSlide();
+            stopAutoSlide(); // Reset auto-slide
+            startAutoSlide();
+        });
+
+        prevButton.addEventListener('click', () => {
+            showPrevSlide();
+            stopAutoSlide(); // Reset auto-slide
+            startAutoSlide();
+        });
+
+        // Adjust the slider on window resize
+        window.addEventListener('resize', updateSlider);
+
+        // Start the auto-slide
+        startAutoSlide();
+    </script>
+</body>
+
+</html>
