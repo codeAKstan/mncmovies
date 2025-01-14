@@ -70,6 +70,36 @@ body {
     display: block;
 }
 
+.navigation .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.navigation .search-bar input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.navigation .search-bar button {
+    padding: 10px;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navigation .search-bar button img {
+    width: 16px;
+    height: 16px;
+}
+
 .header .social-links {
     display: flex;
     gap: 15px;
