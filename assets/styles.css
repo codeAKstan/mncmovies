@@ -35,6 +35,10 @@ body {
     color: #000;
 }
 
+.black {
+    background-color: #000;
+}
+
 /* Sidebar navigation*/
 .navigation {
     position: fixed;
@@ -43,7 +47,7 @@ body {
     width: 100%;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 10;
+    z-index: 11;
     transition: top 0.7s ease-in-out;
     padding-top: 50px;
 }
