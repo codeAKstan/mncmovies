@@ -420,5 +420,13 @@ body {
         margin-bottom: 30px;
     }
 
+    .search-box input {
+        width: 90%;
+    }
+
+    .search-box button {
+        width: 95%
+    }
+
 
 }
