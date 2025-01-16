@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCNTv</title>
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 <body>
@@ -15,7 +17,7 @@
     <!-- Sidebar for Navigation -->
     <div class="navigation">
         <div class="black">
-            <img src="assets/img/mcntv-logo.jpeg" alt="" width="124px" height="124px">
+            <img src="assets/img/MCNTv.png" alt="" width="124px" height="124px">
             <div class="close-btn">&times;</div>
         </div>
         <div class="search-bar">
@@ -59,8 +61,8 @@
 
     <!-- Logo -->
     <div class="logo">
-        <!-- <img src="assets/img/mcntv-logo.jpeg" alt="MCNTv"> -->
-        <h2>MCNTv</h2>
+        <img src="assets/img/MCNTv.png" alt="MCNTv">
+        <!-- <h2>MCNTv</h2> -->
         <p class="tagline">The Home of the Correct Movie Opinion</p>
     </div>
 
@@ -119,44 +121,91 @@
             <button class="control next">❯</button>
         </div>
     </div>
-    <div class="additional-section">
-        <div class="content-container">
-            <div class="news-card">
-                <img src="assets/img/news1.webp" alt="Horror Movies">
-                <div class="text-content">
-                    <span class="category">Movie News Chat</span>
-                    <h4>Looking back at 2024: Top Horror Movies</h4>
-                    <p>Eman Dar • January 14, 2025 • 7 min read</p>
+    <div class="content-wrapper">
+        <!-- Main Content Section -->
+        <main class="main-content">
+            <article class="post">
+                <img src="assets/img/news1.webp" alt="Marvel Trailer">
+                <div class="post-content">
+                    <span class="tag">TV TRAILERS</span>
+                    <h3>Marvel Unveils Intense Trailer for “Daredevil: Born Again”</h3>
+                    <p>Marvel fans rejoice! The Daredevil Born Again trailer has dropped...</p>
+                    <div class="post-meta">
+                        <span>By Emmanuel “E-Man” Noisette</span> |
+                        <span>January 15, 2025</span> |
+                        <span>5 min read</span>
+                    </div>
+                </div>
+            </article>
+            <article class="post">
+                <img src="assets/img/flm5.jpg" alt="Daredevil Born Again">
+                <div class="post-content">
+                    <span class="tag">TV TRAILERS</span>
+                    <h3>Daredevil Born Again Trailer: A Gritty Return to DD’s Roots</h3>
+                    <p>Marvel fans, rejoice! The Daredevil Born Again trailer has dropped...</p>
+                    <div class="post-meta">
+                        <span>By Anthony Whyte</span> |
+                        <span>January 15, 2025</span> |
+                        <span>5 min read</span>
+                    </div>
+                </div>
+            </article>
+            <article class="post">
+                <img src="assets/img/news3.jpg" alt="Daredevil Born Again">
+                <div class="post-content">
+                    <span class="tag">TV TRAILERS</span>
+                    <h3>Daredevil Born Again Trailer: A Gritty Return to DD’s Roots</h3>
+                    <p>Marvel fans, rejoice! The Daredevil Born Again trailer has dropped...</p>
+                    <div class="post-meta">
+                        <span>By Anthony Whyte</span> |
+                        <span>January 15, 2025</span> |
+                        <span>5 min read</span>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <!-- Search Section -->
+            <div class="search-box">
+                <h3>Search</h3>
+                <input type="text" placeholder="Search">
+                <button>Search</button>
+            </div>
+
+            <!-- Stay Connected -->
+            <div class="stay-connected">
+                <h3>Stay Connected</h3>
+                <div class="social-stats">
+                    <div>
+                        <i class="fas fa-facebook"></i>
+                        <span>21,803 Fans</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-youtube"></i>
+                        <span>14,200 Subscribers</span>
+                    </div>
+                    <div>
+                        <i class="fa fa-comment"></i>
+                        <span>26,420 Posts</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="news-card">
-                <img src="assets/img/news3.jpg" alt="Fateh Review">
-                <div class="text-content">
-                    <span class="category">Bollywood Reviews</span>
-                    <h4>Brace Yourselves For Sonu Sood's Directorial Debut As "Fateh"!</h4>
-                    <p>Subhadeep Kumar Ganguli • January 14, 2025 • 9 min read</p>
+            <!-- Latest Reviews -->
+            <div class="latest-reviews">
+                <h3>Latest Reviews</h3>
+                <div class="review">
+                    <img src="assets/img/news1.webp" alt="Review 1">
+                    <p>Den of Thieves 2: Pantera Review: Ambitious Heist Thriller Fumbles</p>
+                </div>
+                <div class="review">
+                    <img src="assets/img/news3.jpg" alt="Review 2">
+                    <p>Brace Yourselves For Sonu Sood’s Directorial Debut As “Fateh”!</p>
                 </div>
             </div>
-
-            <div class="news-card">
-                <img src="assets/img/news1.webp" alt="Jallikattu 2025">
-                <div class="text-content">
-                    <span class="category">Bollywood News</span>
-                    <h4>Jallikattu: Tamil Nadu’s Bull-Taming Tradition Goes Global with ZEE5</h4>
-                    <p>Anthony Whyte • January 14, 2025 • 4 min read</p>
-                </div>
-            </div>
-
-            <div class="news-card">
-                <img src="assets/img/news3.jpg" alt="Aindham Vedham">
-                <div class="text-content">
-                    <span class="category">Bollywood News</span>
-                    <h4>A Thrilling Journey into Mythology with ZEE5 Global’s Aindham Vedham</h4>
-                    <p>Anthony Whyte • January 13, 2025 • 6 min read</p>
-                </div>
-            </div>
-        </div>
+        </aside>
     </div>
 </body>
 <script src="assets/scripts.js"></script>
