@@ -374,6 +374,9 @@ body {
     border-radius: 5px;
 }
 
+.footer {
+    border-top: 3px solid #ff4500;
+}
 
 
 @media (max-width: 768px) {
